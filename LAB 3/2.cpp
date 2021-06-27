@@ -16,7 +16,7 @@ void Prime::getInput(){
         cout << "Number to check: ";
         cin >> num;
         checkPrime(num);
-        cout << "Check more? 'y' for yes and 'n' for NO" << endl;
+        cout << "Check more? 'y' for YES and 'n' for NO" << endl;
         cin >> check;
     } while (check == 'y');
 }

@@ -1,6 +1,5 @@
 #include<iostream>
 #include <math.h>
-#include <cmath>
 
 using namespace std;
 
@@ -10,6 +9,7 @@ class Circle{
 
     public:
         void getData(){
+            cout<<"Enter the radius of circle: "<<endl;
             cin >> rad;
         }
 
@@ -35,6 +35,7 @@ class Triangle{
 
     public:
         void getData(){
+            cout<<"Enter the sides of triangle serially: "<<endl;
             cin >> s1;
             cin >> s2;
             cin >> s3;
@@ -66,6 +67,7 @@ class Rectangle{
 
     public:
         void getData(){
+            cout<<"Enter the length and breadth of the rectangle serially: "<<endl;
             cin >> l;
             cin >> b;
         }

@@ -40,9 +40,9 @@ int main()
 
     cout << "Fahrenheit temp: ";
     f.getData();
-    cout << "TO CELSIUS: " << f.toCelsius() << endl;
+    cout << "To celsius: " << f.toCelsius() << endl;
     cout << "Celsius temp: ";
     c.getData();
-    cout << "TO FAHRENHEIT: " << c.toFahrenheit() << endl;
+    cout << "To fahrenheit: " << c.toFahrenheit() << endl;
     return 0;
 }

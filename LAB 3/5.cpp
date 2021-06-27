@@ -29,16 +29,33 @@ void Employee::showReport(){
 
 int main()
 {
-    Employee e[5];
-    e[0].setPara(1, 3400, 17,2021);
-    e[1].setPara(2, 32434, 10,2021);
-    e[2].setPara(3, 9878, 8,2021);
-    e[3].setPara(4, 26362, 21,2021);
-    e[4].setPara(5, 6567, 23, 2021);
+    int noE;
+    cout<<"Enter the number of employees: ";
+    cin>>noE;
+    cout<<endl;
+    int id, bonus, overtime, year;
 
-    for (int i = 0; i < 5; i++)
-    {
-        e[i].showReport();
+    Employee *employee;
+    employee = new Employee[noE];
+
+    for(size_t i  = 0; i< noE; i++ ){
+        cout<<"Enter the data for Employee "<<(i+1)<<": "<<endl;
+        cout<<"Enter the id: ";cin>>id;
+        cout<<"Enter bonus: ";cin>>bonus;
+        cout<<"Enter overtime: ";cin>>overtime;
+        cout<<"Enter year: ";cin>>year;
+        employee[i].setPara(id, bonus, overtime, year);
+        cout<<endl;
+
     }
-        return 0;
+
+    for (size_t i = 0; i < noE; i++)
+    {
+        cout<<"Report for Employee "<<(i+1)<<": "<<endl;
+        employee[i].showReport();
+    }
+    delete [] employee;
+
+    return 0;
+
 }
