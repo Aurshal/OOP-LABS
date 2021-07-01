@@ -12,7 +12,7 @@ class Time{
             amORpm = t;
         }
         Time add(Time t){
-            Time temp;
+            Time temp; 
             
             if(amORpm == "AM" && t.amORpm == "AM")
                 temp.amORpm = "AM";
@@ -51,12 +51,12 @@ class Time{
             }
             else{
                 if(hrs >= 0 && hrs<12){
-                if(hrs == 0){
-                    hrs = 12;
-                }
-                else
-                    hrs = hrs;
-                amORpm = "AM";
+                    if(hrs == 0){
+                        hrs = 12;
+                    }
+                    else
+                        hrs = hrs;
+                    amORpm = "AM";
                 }
                 else if(hrs>=12 && hrs <=23){
                     if(hrs == 12)
@@ -83,10 +83,10 @@ class Time{
             }
             else{
                 if(amORpm == "AM"){
-                if(hrs>=1 && hrs<=12)
-                    hrs = hrs;
-                if(hrs == 12)
-                    hrs = 0;
+                    if(hrs>=1 && hrs<=12)
+                        hrs = hrs;
+                    if(hrs == 12)
+                        hrs = 0;
                 }
                 else if(amORpm == "PM"){
                     if(hrs>=1 && hrs <=12){
@@ -94,9 +94,6 @@ class Time{
                             hrs = 12;
                         else
                             hrs = 12+hrs;
-                    }
-                    if(hrs == 12){
-                        hrs = 12;
                     }
                 }
                 cout<<"Time in 24-hr format: "<<endl;
@@ -111,6 +108,7 @@ int main()
 {
     Time t1(2,50,12,"AM"), t2(7,50,45,"PM"), t3;
     t3 = t2.add(t1);
+    cout<<"New time after adding: "<<endl;
     t3.twelveHrFor();
     t3.twentyFourHrFor();
     return 0;

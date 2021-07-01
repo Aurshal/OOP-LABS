@@ -33,13 +33,13 @@ class Con{
             delete [] text;
         }
 
-    void join(Con p, Con q){
-        text = concat(p.text,q.text);
-    }
+        void join(Con p, Con q){
+            text = concat(p.text,q.text);
+        }
 
-    void show(){
-        cout<<text<<endl;
-    }
+        void show(){
+            cout<<text<<endl;
+        }
 };
 
 int main(){
@@ -47,6 +47,7 @@ int main(){
     Con o2((char*)"Creatures of logic");
     Con o3;
     o3.join(o1, o2);
+    cout<<"The concatenated text is: "<<endl;
     o3.show();
     return 0;
 }

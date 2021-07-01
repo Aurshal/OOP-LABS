@@ -24,11 +24,9 @@ int Demo::count = 0;
 
 
 int main(){
-    Demo d1,d2, d3, d4, d5;
+    Demo d1,d2, d3;
     Demo::totalObjCount(); //use of static member function
     d1.showSerNum(); 
     d2.showSerNum();
     d3.showSerNum();
-    d4.showSerNum();
-    d5.showSerNum();
 }

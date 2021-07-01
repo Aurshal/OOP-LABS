@@ -11,9 +11,9 @@ class Department{
     public:
         Department(int i, string n): id(i), name(n){
             cout<<"Constructor called"<<endl;
-        };
+        }
         ~Department(){
-            cout<<"Object n goes out of scope"<<endl;
+            cout<<"Object d goes out of scope"<<endl;
         }
 };
 int main()
