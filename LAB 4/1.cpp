@@ -13,9 +13,30 @@ class Time{
         }
         Time add(Time t){
             Time temp;
+            
+            if(amORpm == "AM" && t.amORpm == "AM")
+                temp.amORpm = "AM";
+            else if(amORpm == "PM" && t.amORpm == "PM")
+                temp.amORpm = "AM";
+            else
+                temp.amORpm = "PM";
+
             temp.hrs = hrs + t.hrs;
-            temp.min = min + t.min;
+            temp.min = min + t.min;  
             temp.sec = sec + t.sec;
+
+            if(temp.sec >=60){
+                temp.sec -=60;
+                temp.min+=1;
+            }
+            if(temp.min >=60){
+                temp.min -=60;
+                temp.hrs+=1;
+            }
+            if(temp.hrs > 12 && temp.hrs<=24)
+                temp.hrs -= 12;
+            if(temp.hrs > 24)
+                temp.hrs -= 24;
             return temp;
         }
 
@@ -25,7 +46,7 @@ class Time{
             if(amORpm == "AM" || amORpm == "PM"){
                 if(hrs >= 24)
                     hrs = hrs -12;
-                cout<<"12-hr format time: "<<endl;
+                cout<<"Time in 12-hr format: "<<endl;
                 cout<<hrs<<":"<<min<<":"<<sec<<" "<<amORpm<<endl;
             }
             else{
@@ -48,7 +69,7 @@ class Time{
                     hrs = hrs -12;
                 else if(hrs > 24)
                     hrs = hrs - 24;
-                cout<<"12-hr format time: "<<endl;
+                cout<<"Time in 12-hr format: "<<endl;
                 cout<<hrs<<":"<<min<<":"<<sec<<" "<<amORpm<<endl;
             }
         }
@@ -57,7 +78,7 @@ class Time{
             if(amORpm == " "){
                 if(hrs >=24)
                     hrs = hrs -24;
-                cout<<"The time in 24-hr format: "<<endl;
+                cout<<"Time in 24-hr format: "<<endl;
                 cout<<hrs<<":"<<min<<":"<<sec<<endl;
             }
             else{
@@ -78,28 +99,20 @@ class Time{
                         hrs = 12;
                     }
                 }
-                cout<<"The time in 24-hr format: "<<endl;
+                cout<<"Time in 24-hr format: "<<endl;
                 cout<<hrs<<":"<<min<<":"<<sec<<endl;
             }
             
-        }
-
-        void showTime(){
-            cout<<"The time is: ";
-            cout<<hrs<<":"<<min<<":"<<sec<<" "<<amORpm<<endl;
         }
 };
 
 
 int main()
 {
-    Time t1(1,26,12,"AM"), t2(2,23,45,"PM"), t3;
+    Time t1(2,50,12,"AM"), t2(7,50,45,"PM"), t3;
     t3 = t2.add(t1);
-    t3.showTime();
-    t1.twelveHrFor();
-    t1.twentyFourHrFor();
-    t2.twelveHrFor();
-    t2.twentyFourHrFor();
+    t3.twelveHrFor();
+    t3.twentyFourHrFor();
     return 0;
 }
 
