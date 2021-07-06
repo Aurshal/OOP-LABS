@@ -64,14 +64,15 @@ void operator++(Date& d, int){
         ++d.month;
         d.day = 1;
     };
-    if(d.month > 12)
+    if(d.month > 12){
         d.year++;
+        d.month = 1;
+    }
+        
 }
 
-
-
 int main(){
-    Date d1(2020,5,7),d2(1992,2,28);
+    Date d1(2020,11,30),d2(1992,12,31);
     ++d1;
     d2++;
     d1.showDate();
