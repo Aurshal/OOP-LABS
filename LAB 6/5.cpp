@@ -66,7 +66,7 @@ int main()
     cout << "After adding d1 to c1, d1: " << endl;
     d1.add(c1);
     d1.display();
-    cout << "After subtracting f1 from c1, f1: " << endl;
+    cout << "After subtracting c1 from f1, f1: " << endl;
     f1.sub(c1);
     f1.display();
     return 0;
