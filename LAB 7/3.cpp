@@ -3,46 +3,41 @@ using namespace std;
 
 class Student {
 protected:
-    string name;
+    string name, faculty;
 
 public:
-    Student(string n) : name(n) {
+    Student(string n, string f) : name(n), faculty(f) {
 
     }
 
     virtual void display() {
-        cout << "I am student " << endl;
+        cout << name << " is a " << faculty << " student" << endl;
+
     }
 };
 
 class Engineering :public Student {
-protected:
-    string faculty;
 public:
-    Engineering(string n, string f) :Student(n), faculty(f) {}
+    Engineering(string n, string f) :Student(n, f) {}
     void display() {
-        cout << "I am a engineering student" << endl;
+        Student::display();
     }
 };
 
 class Medicine :public Student {
-protected:
-    string faculty;
 public:
-    Medicine(string n, string f) :Student(n), faculty(f) {}
+    Medicine(string n, string f) :Student(n, f) {}
     void display() {
-        cout << "I am a Medicine student" << endl;
+        Student::display();
     }
 };
 
 
 class Science :public Student {
-protected:
-    string faculty;
 public:
-    Science(string n, string f) :Student(n), faculty(f) {}
+    Science(string n, string f) :Student(n, f) {}
     void display() {
-        cout << "I am a Science student" << endl;
+        Student::display();
     }
 };
 
@@ -53,4 +48,5 @@ int main() {
     s[2] = new Science("Pawan", "Astro");
     for (size_t i = 0; i < 3; i++)
         s[i]->display();
+    delete[]s;
 }

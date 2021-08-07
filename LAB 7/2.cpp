@@ -45,7 +45,7 @@ public:
 
     void display() {
         Student::display();
-        cout << "Salary: " << Employee::salary << endl;
+        cout << "Salary: " << salary << endl;
     }
 };
 

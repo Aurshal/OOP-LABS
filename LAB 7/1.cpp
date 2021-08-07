@@ -8,9 +8,7 @@ protected:
     string name;
 public:
     Shape(string s) : name(s) {}
-    virtual void calArea() {
-        return;
-    }
+    virtual void calArea() = 0;
     virtual void display() {
         cout << this->name << endl;
     }
