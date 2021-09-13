@@ -179,7 +179,7 @@ void showMenu(Account& a) {
 }
 int main() {
     Account a;
-    cout << "\n--------STUDENT RECORD MANAGEMENT SYSTEM--------\n";
+    cout << "\n--------ACCOUNT MANAGEMENT SYSTEM--------\n";
 
     while (true)
         showMenu(a);

@@ -12,7 +12,7 @@ int main() {
 
     cout.setf(ios::right, ios::adjustfield);
     cout.width(14);
-    cout.fill('*');
+    cout.fill('#');
     cout.precision(4);
     cout << x << endl;
     cout.unsetf(ios::adjustfield);

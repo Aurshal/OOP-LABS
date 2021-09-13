@@ -20,11 +20,11 @@ int main() {
     stData student[50];
     for (int i = 0; i < n; i++) {
         cout << "Enter data for Student " << (i + 1) << ":" << endl;
-        cout << "Enter name " << ": ";
+        cout << "Enter name: ";
         cin >> student[i].name;
-        cout << "Enter roll " << ": ";
+        cout << "Enter roll: ";
         cin >> student[i].roll;
-        cout << "Enter address" << ": ";
+        cout << "Enter address: ";
         cin >> student[i].add;
         cout << "------------------------------------" << endl;
     }
@@ -64,7 +64,7 @@ int main() {
     int r;
     char a[100];
     if (!myfile1.is_open()) {
-        cout << "Error opening the file man!" << endl;
+        cout << "Error opening the file" << endl;
     }
     cout << "\n\n---------Data from the file-------\n";
     int i;
