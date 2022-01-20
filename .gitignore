@@ -3,3 +3,17 @@
 ?
 *.dat
 *.txt
+%
+#exclude cpp binary files
+*.bin
+*.exe
+*.dll
+*.obj
+*.lib
+*.a
+*.o
+*.lo
+*.la
+*.so
+*.so.*
+
